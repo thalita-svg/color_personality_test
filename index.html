@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hue You Are — Color Personality Test</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- File CSS lokal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Dynamic Background Overlay -->
+  <div class="background-overlay" id="backgroundOverlay"></div>
+  <!-- Cursor Trail Container -->
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <!-- 🔸 GANTI SESUAI STRUKTUR GAMBAR KAMU -->
+      <img src="logo.png/web.png" alt="Hue You Are Logo" width="60" height="55" />
+    </div>
+    <div class="navbar-menu">
+      <a href="#" id="nav-color">Color</a>
+      <a href="#" id="nav-menu">Menu</a>
+      <a href="#" id="nav-about">About</a>
+    </div>
+  </nav>
+
+  <main class="app">
+    <!-- Landing -->
+    <section id="landing" class="card">
+      <div style="font-size: 72px; color: #5b8bf7; margin-bottom: 16px">🎨</div>
+      <h1>Hue You Are</h1>
+      <p style="font-size: 18px; line-height: 1.6; max-width: 500px; margin: 0 auto 24px;">
+        Temukan kepribadianmu melalui warna favoritmu —
+        <strong>tes seru, hanya 2 menit</strong>, tanpa ribet!
+      </p>
+      <button id="startBtn" class="btn">Mulai Tes Warna</button>
+    </section>
+
+    <!-- Test Card -->
+    <section id="testCard" class="card" style="display: none">
+      <div class="progress">
+        <div id="progBar" class="progress-bar"></div>
+      </div>
+      <h2 id="questionTxt">Question</h2>
+      <div id="optionsGrid"></div>
+      <div style="margin-top: 16px; display: flex; justify-content: center; gap: 60px;">
+        <button id="prevBtn" class="btn" style="background: #fff7ef; color: #5c3b28; border: 1px solid #5c3b28;" disabled>
+          <i class="fas fa-angle-double-left"></i>
+        </button>
+        <button id="nextBtn" class="btn">
+          <i class="fas fa-angle-double-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Result Card -->
+    <section id="resultCard" class="card" style="display: none"></section>
+
+    <!-- Color Personality Grid -->
+    <section id="colorCard" class="card">
+      <h2>Tipe Kepribadian</h2>
+      <div class="color-grid" id="colorGrid"></div>
+    </section>
+
+    <!-- Detail Card -->
+    <section id="detailCard" class="card" style="display: none"></section>
+
+    <!-- About Card -->
+    <section id="aboutCard" class="card">
+      <h2>About Hue You Are</h2>
+      <div class="about-layout">
+        <!-- 🔸 GANTI SESUAI STRUKTUR GAMBAR KAMU -->
+        <img src="logo.png/web.png" alt="Hue You Are Logo" class="about-logo" />
+        <div class="about-text">
+          <p>
+            Website ini dibuat untuk membantu kamu menemukan warna kepribadian melalui pilihan visual yang simpel dan intuitif.
+            Setiap jawabanmu membentuk aura unik yang ditampilkan melalui animasi dan warna yang berubah secara real-time.
+          </p>
+          <p>
+            Tes ini dirancang agar terasa fun, calming, dan berbeda dari tes kepribadian pada umumnya — lebih visual, lebih interaktif, dan lebih personal.
+          </p>
+          <p>Everyone has a color.</p>
+          <p>This test helps you discover your ✨ </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🔸 Script ditempatkan di akhir body (lebih aman) -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
